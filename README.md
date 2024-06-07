@@ -4,7 +4,7 @@
         发布个人主页，介绍个人履历
 
 # 使用说明
-
+## 1.创建并启动容器实例
 ```shell
 cd flask_resume
 
@@ -42,5 +42,26 @@ flask_resume-redis-1   redis               alpine              f597a450f464     
 flask_resume-web-1     resume              alpine              eaf643ee1167        69.4MB
 ```
 
+## 2.域名地址映射配置
+    Windows默认位置：C:\Windows\System32\drivers\etc\hosts
+    Linux：/etc/hosts
+    用文本编辑器以管理员模式打开hosts文件，在文件的结尾处增加一条记录，如下所示：
+    
+```ini
+# 你也可以使用任何你喜欢的域名来替代 resume.dog
+127.0.0.1 resume.dog www.resume.dog
+```
+    测试一下是否生效：
+```shell
+ping resume.dog
+# 生效，输出如下：
+正在 Ping hello.world [127.0.0.1] 具有 32 字节的数据:
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+来自 127.0.0.1 的回复: 字节=32 时间<1ms TTL=128
+# 未生效
+Ping 请求找不到主机 resume.dog。请检查该名称，换一个域名然后重试。
+```
+
 # 浏览器访问 http://resume.dog
-> <img style="width:60%; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/flask-resume-demo.png"/>
+> <img style="width:60%; display: inline-block" src="img/flask-resume-demo.png"/>
