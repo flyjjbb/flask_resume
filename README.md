@@ -1,6 +1,5 @@
 # 使用FLASK创建应用：个人主页
-[个人主页](https://resource.xtalker.cn:8000/_static/img/dog-smile.png)
-> <img style="width:200px; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/dog-smile.png"/>
+<img style="width:200px; display: inline-block" src="https://resource.xtalker.cn:8000/_static/img/dog-smile.png"/>
 
         发布个人主页，介绍个人履历
 
